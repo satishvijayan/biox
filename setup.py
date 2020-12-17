@@ -10,9 +10,9 @@ from biox import __version__ as version
 setup(
 	name='biox',
 	version=version,
-	description='Stores the customizations created for Biox Green Tech. Pvt Ltd, by Charioteer Software Private Limited',
-	author='Charioteer Software Private Limited',
-	author_email='superadmin@charioteersoftware.com',
+	description='BioxGreen Customisations ',
+	author='CSPL',
+	author_email='satish@charioteersoftware.com',
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,

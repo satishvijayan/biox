@@ -1,6 +1,6 @@
-## Biox Customizations
+## Biox
 
-Stores the customizations created for Biox Green Tech. Pvt Ltd, by Charioteer Software Private Limited
+BioxGreen Customisations 
 
 #### License
 
