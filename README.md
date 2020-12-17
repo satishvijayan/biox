@@ -1,6 +1,6 @@
 ## Biox
 
-BioxGreen Customisations 
+Bioxgreen customizations
 
 #### License
 

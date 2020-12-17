@@ -10,7 +10,7 @@ from biox import __version__ as version
 setup(
 	name='biox',
 	version=version,
-	description='BioxGreen Customisations ',
+	description='Bioxgreen customizations',
 	author='CSPL',
 	author_email='satish@charioteersoftware.com',
 	packages=find_packages(),

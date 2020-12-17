@@ -5,7 +5,7 @@ from . import __version__ as app_version
 app_name = "biox"
 app_title = "Biox"
 app_publisher = "CSPL"
-app_description = "BioxGreen Customisations "
+app_description = "Bioxgreen customizations"
 app_icon = "octicon octicon-file-directory"
 app_color = "blue"
 app_email = "satish@charioteersoftware.com"
