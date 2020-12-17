@@ -149,5 +149,8 @@ fixtures = [{
                },
                 "Custom Field",
                 "Custom Script",
-                "Property Setter"
+                "Property Setter", 
+		{
+		"dt": "Report", "filters":{"module": ["in",("Projects")]}
+		}
            ]

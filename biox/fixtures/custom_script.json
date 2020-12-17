@@ -2,6 +2,18 @@
  {
   "docstatus": 0,
   "doctype": "Custom Script",
+  "dt": "Salary Slip",
+  "enabled": 1,
+  "modified": "2020-12-17 15:02:33.589950",
+  "name": "Salary Slip-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Salary Slip', {\n\t\"employee\": function(frm){\n\t// your code here\n\t    cur_frm.fields_dict['salary_structure_assignment'].get_query=function(frm) {\n    \t    return {\n    \t\t    filters: [['Salary Structure Assignment','employee','=',frm.employee]]\n    \t    }\n    \t \n        };\n    }\n}\n)\n\n//https://discuss.erpnext.com/t/is-it-possible-in-unsaved-form-to-use-get-query-method-with-filter-that-contain-one-of-forms-values/30153\n//https://discuss.erpnext.com/t/on-change-event/37526/2\n//https://frappeframework.com/docs/user/en/guides/app-development/overriding-link-query-by-custom-script"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
   "dt": "Onsite Flow Measurement",
   "enabled": 1,
   "modified": "2020-12-17 10:34:23.587754",
