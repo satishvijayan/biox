@@ -3,12 +3,12 @@ from __future__ import unicode_literals
 from . import __version__ as app_version
 
 app_name = "biox"
-app_title = "Biox Customizations"
-app_publisher = "Charioteer Software Private Limited"
-app_description = "Stores the customizations created for Biox Green Tech. Pvt Ltd, by Charioteer Software Private Limited"
+app_title = "Biox"
+app_publisher = "CSPL"
+app_description = "Bioxgreen customizations"
 app_icon = "octicon octicon-file-directory"
-app_color = "grey"
-app_email = "superadmin@charioteersoftware.com"
+app_color = "blue"
+app_email = "satish@charioteersoftware.com"
 app_license = "MIT"
 
 # Includes in <head>
@@ -143,3 +143,11 @@ app_license = "MIT"
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
+fixtures = [{
+                "dt": "DocType",
+                "filters": { "custom" : ["=", "1"] }
+               },
+                "Custom Field",
+                "Custom Script",
+                "Property Setter"
+           ]
