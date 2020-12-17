@@ -143,3 +143,11 @@ app_license = "MIT"
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
+fixtures = [{
+                "dt": "DocType",
+                "filters": { "custom" : ["=", "1"] }
+               },
+                "Custom Field",
+                "Custom Script",
+                "Property Setter"
+           ]

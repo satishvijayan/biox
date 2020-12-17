@@ -1,0 +1,14 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Onsite Flow Measurement",
+  "enabled": 1,
+  "modified": "2020-12-17 10:34:23.587754",
+  "name": "Onsite Flow Measurement-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Onsite Flow Measurement', {\n\trefresh(frm) {\n\t\t// your code here\n\t\tcur_frm.cscript.height=function(doc){\n\t\t    if (doc.biox_wier_notch_type=='Rectangular'){\n\t\t        doc.flow_volume =  1.85 * flt(doc.biox_crest_length)*(flt(doc.height)**1.5)  ;\n\t\t    } else if (doc.biox_wier_notch_type =='Triangular'){\n\t\t        doc.flow_volume = 1.42 * flt(doc.height)**2.5;\n\t\t    }\n\t\t  doc.flow_volume *=60*60*24/1000; // converts cubic meter per sec to MLD per Day\n\t\t  refresh_field('flow_volume');\n\t\t}\n\t}\n})"
+ }
+]
