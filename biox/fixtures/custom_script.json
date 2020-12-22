@@ -22,5 +22,17 @@
   "parentfield": null,
   "parenttype": null,
   "script": "frappe.ui.form.on('Onsite Flow Measurement', {\n\trefresh(frm) {\n\t\t// your code here\n\t\tcur_frm.cscript.height=function(doc){\n\t\t    if (doc.biox_wier_notch_type=='Rectangular'){\n\t\t        doc.flow_volume =  1.85 * flt(doc.biox_crest_length)*(flt(doc.height)**1.5)  ;\n\t\t    } else if (doc.biox_wier_notch_type =='Triangular'){\n\t\t        doc.flow_volume = 1.42 * flt(doc.height)**2.5;\n\t\t    }\n\t\t  doc.flow_volume *=60*60*24/1000; // converts cubic meter per sec to MLD per Day\n\t\t  refresh_field('flow_volume');\n\t\t}\n\t}\n})"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Lab Test Results",
+  "enabled": 1,
+  "modified": "2020-12-21 23:26:42.462645",
+  "name": "Lab Test Results-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "\n\nfrappe.ui.form.on('Lab Test Results', \"lab_test_structure\", function(frm) {\n\t//if (frm.doc.lab_test_structure){\n        frm.clear_table(\"parameter_lists\");\n        frappe.model.with_doc(\"Lab Test Structure\",frm.doc.lab_test_structure, function() {\n            var source_doc=frappe.model.get_doc(\"Lab Test Structure\",frm.doc.lab_test_structure);\n            $.each(source_doc.parameters_list, function(index, source_row){\n                var d = frm.add_child(\"parameters_list\");\n                d.parameter=source_row.parameter;\n                d.sample_position=source_row.sample_position;\n                d.uom=source_row.uom;\n                cur_frm.refresh_field('parameters_list');\n            })\n        })\n\t//}\n\t\t    \n})\n\nfrappe.ui.form.on('Lab Test Results',\"project\", function(frm){\n\t// your code here\n    cur_frm.fields_dict['lab_test_structure'].get_query=function(frm) {\n\t    return {\n\t\t    filters: [['Lab Test Structure','Project','=',frm.project]\n\t\t    \n            ]\n        }\n\t \n    };\n})\n\nfrappe.ui.form.on('Lab Test Results',\"onload\", function(frm){\n\t// your code here\n    $(\".grid-add-row\").hide();\n})\n\n//https://discuss.erpnext.com/t/fetch-the-table-from-customer-into-the-quotation-by-custom-script/42026/6\n//https://discuss.erpnext.com/t/help-needed-on-frappe-call-method/7089\n//https://discuss.erpnext.com/t/filter-with-like-in-frappe-client-get-list/67620\n//https://discuss.erpnext.com/t/how-to-fetch-child-tables/12348/11\n//https://discuss.erpnext.com/t/how-to-hide-remove-button-in-child-table/9421/8"
  }
 ]

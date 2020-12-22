@@ -143,14 +143,17 @@ app_license = "MIT"
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
-fixtures = [{
+fixtures = [	{
                 "dt": "DocType",
                 "filters": { "custom" : ["=", "1"] }
-               },
-                "Custom Field",
-                "Custom Script",
-                "Property Setter", 
-		{
-		"dt": "Report", "filters":{"module": ["in",("Projects")]}
+               	}
+		, {
+                "dt": "Custom Field", "filters": {"dt" : ["in", ("Project")]}
+                }
+		, "Custom Script"
+                , "Property Setter"
+		, {
+		"dt": "Report", "filters":{"name": ["like",
+						("Daily Average Flow")]}
 		}
            ]
