@@ -143,7 +143,26 @@ app_license = "MIT"
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
-fixtures = [	{
+fixtures = [fixtures = [    {
+                "dt": "DocType",
+                "filters": { "custom" : ["=", "1"] }
+                }
+                , {
+                "dt": "Custom Field", "filters": {"dt" : ["in", ("Project")]}
+                }
+                , "Custom Script"
+                , "Property Setter"
+                , {
+                        "dt": "Report", "filters":{"name": ["like",("Daily Average Flow")]}
+                }
+"               , {
+                        "dt": "Role", "filters": {"name": ["like", ("Biox%")]}
+                  }
+                , {
+                    “dt”: “Custom DocPerm”, “filters”: {“role”: [(“like”,“Biox%”)]}
+                }
+           ]
+	{
                 "dt": "DocType",
                 "filters": { "custom" : ["=", "1"] }
                	}
@@ -155,10 +174,10 @@ fixtures = [	{
 		, {
 			"dt": "Report", "filters":{"name": ["like",("Daily Average Flow")]}
 		}
-		, {
+"		, {
 			"dt": "Role", "filters": {"name": ["like", "Biox%"]}
 		  }
 		, {
-                    "dt": "Custom DocPerm", "filters": {"role": ["like","Biox%"]}
+                    “dt”: “Custom DocPerm”, “filters”: {“role”: [“like”,“Biox%”]}
                 }
            ]
