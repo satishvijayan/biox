@@ -162,6 +162,6 @@ fixtures = [	{
                     "dt": "Custom DocPerm", "filters": {"role": ["like","Biox%"]}
                 },
 		{ 
-		"dt": "Role Profile", "filters":{"name": ["like", "Biox%"]
+		"dt": "Role Profile", "filters":{"name": ["like", "Biox%"]}
 		}
            ]
