@@ -169,11 +169,11 @@ fixtures = [	{
 		"Dosing Product",
 		"Sampling Company",
 		"Sampling Location",
-		"Lab Test Structure",
+		"Project Type",
+		"Project",	
 		"Parameter Detail Values",
 		"Subjective Parameter",
 		"Water Height Measurement",
-		"Lab Test Results",
 		# "Dosage Structure",
 		# "Daily Dosage",
 		# "Dosage Amounts",
@@ -182,6 +182,6 @@ fixtures = [	{
 		"Subjective Parameter Valid Values",
 		"Allowed Sampling Locations",
 		"Parameter Result Values",
-		"Project Type",
-		"Project"		
+		"Lab Test Structure",
+		"Lab Test Results"
            ]

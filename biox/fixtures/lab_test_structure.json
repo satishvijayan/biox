@@ -791,5 +791,95 @@
   "project": "Prayagraj Arain Drain 1",
   "subjective_parameter_lab_test_structure": [],
   "to_date": "2021-11-16"
+ },
+ {
+  "active": 1,
+  "docstatus": 0,
+  "doctype": "Lab Test Structure",
+  "dosage_structure": [],
+  "from_date": "2021-04-30",
+  "modified": "2021-02-03 16:12:53.924234",
+  "name": "PRJ:-Prayagraj Arain Drain 2 STP Byepass|0001",
+  "num_columns": "2",
+  "parameters_list": [
+   {
+    "contractually_required": 1,
+    "lower_range": 6.5,
+    "parameter": "pH",
+    "parent": "PRJ:-Prayagraj Arain Drain 2 STP Byepass|0001",
+    "parentfield": "parameters_list",
+    "parenttype": "Lab Test Structure",
+    "percent_change": 0.0,
+    "print_order": 1,
+    "uom": null,
+    "upper_range": 9.0
+   },
+   {
+    "contractually_required": 1,
+    "lower_range": 0.0,
+    "parameter": "COD",
+    "parent": "PRJ:-Prayagraj Arain Drain 2 STP Byepass|0001",
+    "parentfield": "parameters_list",
+    "parenttype": "Lab Test Structure",
+    "percent_change": 0.0,
+    "print_order": 2,
+    "uom": "mg/L",
+    "upper_range": 100.0
+   },
+   {
+    "contractually_required": 1,
+    "lower_range": 0.0,
+    "parameter": "BOD",
+    "parent": "PRJ:-Prayagraj Arain Drain 2 STP Byepass|0001",
+    "parentfield": "parameters_list",
+    "parenttype": "Lab Test Structure",
+    "percent_change": 0.0,
+    "print_order": 3,
+    "uom": "mg/L",
+    "upper_range": 30.0
+   },
+   {
+    "contractually_required": 1,
+    "lower_range": 0.0,
+    "parameter": "TSS",
+    "parent": "PRJ:-Prayagraj Arain Drain 2 STP Byepass|0001",
+    "parentfield": "parameters_list",
+    "parenttype": "Lab Test Structure",
+    "percent_change": 0.0,
+    "print_order": 4,
+    "uom": "mg/L",
+    "upper_range": 100.0
+   },
+   {
+    "contractually_required": 0,
+    "lower_range": 0.0,
+    "parameter": "Dissolved Oxygen",
+    "parent": "PRJ:-Prayagraj Arain Drain 2 STP Byepass|0001",
+    "parentfield": "parameters_list",
+    "parenttype": "Lab Test Structure",
+    "percent_change": 0.0,
+    "print_order": 5,
+    "uom": "mg/L",
+    "upper_range": 0.0
+   },
+   {
+    "contractually_required": 0,
+    "lower_range": 0.0,
+    "parameter": "TDS",
+    "parent": "PRJ:-Prayagraj Arain Drain 2 STP Byepass|0001",
+    "parentfield": "parameters_list",
+    "parenttype": "Lab Test Structure",
+    "percent_change": 0.0,
+    "print_order": 6,
+    "uom": "mg/L",
+    "upper_range": 0.0
+   }
+  ],
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "project": "Prayagraj Arain Drain 2 STP Byepass",
+  "subjective_parameter_lab_test_structure": [],
+  "to_date": "2021-05-01"
  }
 ]
