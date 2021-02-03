@@ -1,0 +1,84 @@
+[
+ {
+  "abbr": "ODOUR",
+  "description": null,
+  "docstatus": 1,
+  "doctype": "Subjective Parameter",
+  "modified": "2021-01-04 12:15:16.796219",
+  "name": "Plant Odour Status",
+  "parameter_name": "Plant Odour Status",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "valid_values": [
+   {
+    "active": 1,
+    "code": "1",
+    "description": null,
+    "name1": "Normal",
+    "parent": "Plant Odour Status",
+    "parentfield": "valid_values",
+    "parenttype": "Subjective Parameter"
+   },
+   {
+    "active": 1,
+    "code": "2",
+    "description": null,
+    "name1": "Pungent",
+    "parent": "Plant Odour Status",
+    "parentfield": "valid_values",
+    "parenttype": "Subjective Parameter"
+   },
+   {
+    "active": 1,
+    "code": "3",
+    "description": null,
+    "name1": "Bad",
+    "parent": "Plant Odour Status",
+    "parentfield": "valid_values",
+    "parenttype": "Subjective Parameter"
+   }
+  ]
+ },
+ {
+  "abbr": "GREENERY",
+  "description": null,
+  "docstatus": 1,
+  "doctype": "Subjective Parameter",
+  "modified": "2021-01-04 12:18:22.792387",
+  "name": "Surrounding Greenery",
+  "parameter_name": "Surrounding Greenery",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "valid_values": [
+   {
+    "active": 1,
+    "code": "Good",
+    "description": null,
+    "name1": "Lush",
+    "parent": "Surrounding Greenery",
+    "parentfield": "valid_values",
+    "parenttype": "Subjective Parameter"
+   },
+   {
+    "active": 1,
+    "code": "OK",
+    "description": null,
+    "name1": "Patchy",
+    "parent": "Surrounding Greenery",
+    "parentfield": "valid_values",
+    "parenttype": "Subjective Parameter"
+   },
+   {
+    "active": 1,
+    "code": "Bad",
+    "description": null,
+    "name1": "Barren",
+    "parent": "Surrounding Greenery",
+    "parentfield": "valid_values",
+    "parenttype": "Subjective Parameter"
+   }
+  ]
+ }
+]

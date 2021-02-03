@@ -1,0 +1,52 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Allowed Sampling Locations",
+  "location_name": "Inlet",
+  "modified": "2020-12-22 18:14:15.267951",
+  "name": "26a2fb3deb",
+  "parent": "PRJ:-Kanpur Rectangular|00004",
+  "parentfield": "allowed_sampling_locations",
+  "parenttype": "Lab Test Structure"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Allowed Sampling Locations",
+  "location_name": "Inlet",
+  "modified": "2020-12-22 18:15:01.915205",
+  "name": "e198630315",
+  "parent": "PRJ:-Kanpur Triangular|00002",
+  "parentfield": "allowed_sampling_locations",
+  "parenttype": "Lab Test Structure"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Allowed Sampling Locations",
+  "location_name": "Outlet",
+  "modified": "2020-12-22 18:14:15.267951",
+  "name": "fd9fb57a37",
+  "parent": "PRJ:-Kanpur Rectangular|00004",
+  "parentfield": "allowed_sampling_locations",
+  "parenttype": "Lab Test Structure"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Allowed Sampling Locations",
+  "location_name": "Outlet",
+  "modified": "2020-12-22 18:15:01.915205",
+  "name": "ca44f30d7b",
+  "parent": "PRJ:-Kanpur Triangular|00002",
+  "parentfield": "allowed_sampling_locations",
+  "parenttype": "Lab Test Structure"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Allowed Sampling Locations",
+  "location_name": "Secondary Stage",
+  "modified": "2020-12-22 18:15:01.915205",
+  "name": "ebef245b6a",
+  "parent": "PRJ:-Kanpur Triangular|00002",
+  "parentfield": "allowed_sampling_locations",
+  "parenttype": "Lab Test Structure"
+ }
+]
