@@ -1,0 +1,170 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2021-01-11 11:09:33.311237",
+  "name": "Biox Accounts",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Biox Accounts",
+  "roles": [
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Expense Approver"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR User"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects Manager"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects User"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Master Manager"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase User"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Master Manager"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Biox Project Manager"
+   },
+   {
+    "parent": "Biox Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Biox Project User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2021-01-11 11:11:39.316083",
+  "name": "Biox projects",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Biox Project Manager",
+  "roles": [
+   {
+    "parent": "Biox projects",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects User"
+   },
+   {
+    "parent": "Biox projects",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects Manager"
+   },
+   {
+    "parent": "Biox projects",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Biox Project User"
+   },
+   {
+    "parent": "Biox projects",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Biox Project Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2021-01-11 11:08:50.099062",
+  "name": "Biox project User",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Biox project User",
+  "roles": [
+   {
+    "parent": "Biox project User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects User"
+   },
+   {
+    "parent": "Biox project User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Biox Project User"
+   }
+  ]
+ }
+]

@@ -1,0 +1,54 @@
+[
+ {
+  "amended_from": null,
+  "code": "BRM",
+  "description": null,
+  "docstatus": 1,
+  "doctype": "Dosing Product",
+  "modified": "2021-01-08 15:01:26.778814",
+  "name": "BRM",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "product_name": "Biorem"
+ },
+ {
+  "amended_from": null,
+  "code": "NTR",
+  "description": null,
+  "docstatus": 1,
+  "doctype": "Dosing Product",
+  "modified": "2021-01-08 15:01:58.622793",
+  "name": "NTR",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "product_name": "Nutrient"
+ },
+ {
+  "amended_from": null,
+  "code": "STK",
+  "description": null,
+  "docstatus": 1,
+  "doctype": "Dosing Product",
+  "modified": "2021-01-08 15:02:43.826460",
+  "name": "STK",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "product_name": "Stink Kill"
+ },
+ {
+  "amended_from": null,
+  "code": "SEPT",
+  "description": null,
+  "docstatus": 1,
+  "doctype": "Dosing Product",
+  "modified": "2021-01-08 15:03:17.361688",
+  "name": "SEPT",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "product_name": "Septact"
+ }
+]

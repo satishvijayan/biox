@@ -163,5 +163,10 @@ fixtures = [	{
                 },
 		{ 
 		"dt": "Role Profile", "filters":{"name": ["like", "Biox%"]}
-		}
+		},
+		"UOM",
+		"Parameter",
+		"Dosing Product",
+		"Sampling Company",
+		"Sampling Location"
            ]

@@ -1,0 +1,57 @@
+[
+ {
+  "active": 1,
+  "docstatus": 0,
+  "doctype": "Sampling Location",
+  "location_name": "Inlet",
+  "modified": "2020-12-22 15:30:51.865215",
+  "name": "Inlet",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "active": 1,
+  "docstatus": 0,
+  "doctype": "Sampling Location",
+  "location_name": "Outlet",
+  "modified": "2020-12-22 15:31:03.993751",
+  "name": "Outlet",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "active": 1,
+  "docstatus": 0,
+  "doctype": "Sampling Location",
+  "location_name": "Primary Stage",
+  "modified": "2020-12-22 15:31:15.265236",
+  "name": "Primary Stage",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "active": 1,
+  "docstatus": 0,
+  "doctype": "Sampling Location",
+  "location_name": "Secondary Stage",
+  "modified": "2020-12-22 15:31:24.537858",
+  "name": "Secondary Stage",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "active": 1,
+  "docstatus": 0,
+  "doctype": "Sampling Location",
+  "location_name": "Tertiary Stage",
+  "modified": "2020-12-22 15:31:33.529534",
+  "name": "Tertiary Stage",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]
