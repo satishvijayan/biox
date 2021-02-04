@@ -1,79 +1,10 @@
 [
  {
   "amended_from": null,
-  "docstatus": 1,
-  "doctype": "Lab Test Results",
-  "lab_test_structure": "PRJ:-Pankhi - Triangular|00001",
-  "modified": "2021-01-06 18:20:19.612544",
-  "name": "LABTEST|Pankhi - Triangular|00005",
-  "parameters_list": [
-   {
-    "parameter": "pH",
-    "parent": "LABTEST|Pankhi - Triangular|00005",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 0.0,
-    "uom": null
-   },
-   {
-    "parameter": "BOD",
-    "parent": "LABTEST|Pankhi - Triangular|00005",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 0.0,
-    "uom": "mg/L"
-   },
-   {
-    "parameter": "COD",
-    "parent": "LABTEST|Pankhi - Triangular|00005",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 0.0,
-    "uom": "mg/L"
-   },
-   {
-    "parameter": "Oil & Grease",
-    "parent": "LABTEST|Pankhi - Triangular|00005",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 0.0,
-    "uom": "mg/L"
-   }
-  ],
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "project": "Pankhi - Triangular",
-  "sample_collected_by": "Satish Vijayan",
-  "sample_date_time": "2021-01-06 18:18:55",
-  "sample_reference": null,
-  "sample_report_copy": null,
-  "sampling_company": null,
-  "sampling_location": "Inlet",
-  "site_gps_photo": "/files/Happy-new-year-1.png",
-  "subjective_parameter_lab_test_results": [
-   {
-    "parent": "LABTEST|Pankhi - Triangular|00005",
-    "parentfield": "subjective_parameter_lab_test_results",
-    "parenttype": "Lab Test Results",
-    "subjective_parameter": "Surrounding Greenery",
-    "test_result": null
-   },
-   {
-    "parent": "LABTEST|Pankhi - Triangular|00005",
-    "parentfield": "subjective_parameter_lab_test_results",
-    "parenttype": "Lab Test Results",
-    "subjective_parameter": "Plant Odour Status",
-    "test_result": null
-   }
-  ]
- },
- {
-  "amended_from": null,
   "docstatus": 0,
   "doctype": "Lab Test Results",
   "lab_test_structure": "PRJ:-Pankhi - Triangular|00001",
-  "modified": "2021-01-08 23:18:48.236222",
+  "modified": "2021-02-04 11:24:22.606447",
   "name": "LABTEST|Pankhi - Triangular|00006",
   "parameters_list": [
    {
@@ -112,12 +43,12 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "project": "Pankhi - Triangular",
+  "project": "Pankhi nala",
   "sample_collected_by": "satish",
   "sample_date_time": "2021-01-06 20:04:18",
   "sample_reference": "bsf123123",
   "sample_report_copy": null,
-  "sampling_company": null,
+  "sampling_company": "Biox",
   "sampling_location": "Inlet",
   "site_gps_photo": "/files/workfast.png",
   "subjective_parameter_lab_test_results": [
@@ -130,130 +61,6 @@
    },
    {
     "parent": "LABTEST|Pankhi - Triangular|00006",
-    "parentfield": "subjective_parameter_lab_test_results",
-    "parenttype": "Lab Test Results",
-    "subjective_parameter": "Plant Odour Status",
-    "test_result": null
-   }
-  ]
- },
- {
-  "amended_from": null,
-  "docstatus": 1,
-  "doctype": "Lab Test Results",
-  "lab_test_structure": "PRJ:-Ganda Nalla Rectangular|00001",
-  "modified": "2021-01-08 11:29:10.804983",
-  "name": "LABTEST|Ganda Nalla Rectangular|00001",
-  "parameters_list": [
-   {
-    "parameter": "pH",
-    "parent": "LABTEST|Ganda Nalla Rectangular|00001",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 7.0,
-    "uom": null
-   },
-   {
-    "parameter": "BOD",
-    "parent": "LABTEST|Ganda Nalla Rectangular|00001",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 30.0,
-    "uom": "mg/L"
-   },
-   {
-    "parameter": "COD",
-    "parent": "LABTEST|Ganda Nalla Rectangular|00001",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 100.0,
-    "uom": "mg/L"
-   },
-   {
-    "parameter": "Oil & Grease",
-    "parent": "LABTEST|Ganda Nalla Rectangular|00001",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 0.0,
-    "uom": "mg/L"
-   }
-  ],
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "project": "Ganda Nalla Rectangular",
-  "sample_collected_by": "Satish",
-  "sample_date_time": "2021-01-07 11:24:21",
-  "sample_reference": null,
-  "sample_report_copy": null,
-  "sampling_company": null,
-  "sampling_location": "Outlet",
-  "site_gps_photo": "/files/erpnext.PNG",
-  "subjective_parameter_lab_test_results": [
-   {
-    "parent": "LABTEST|Ganda Nalla Rectangular|00001",
-    "parentfield": "subjective_parameter_lab_test_results",
-    "parenttype": "Lab Test Results",
-    "subjective_parameter": "Plant Odour Status",
-    "test_result": null
-   }
-  ]
- },
- {
-  "amended_from": null,
-  "docstatus": 1,
-  "doctype": "Lab Test Results",
-  "lab_test_structure": "PRJ:-Ganda Nalla Rectangular|00001",
-  "modified": "2021-01-08 19:27:52.780988",
-  "name": "LABTEST|Ganda Nalla Rectangular|00002",
-  "parameters_list": [
-   {
-    "parameter": "pH",
-    "parent": "LABTEST|Ganda Nalla Rectangular|00002",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 0.0,
-    "uom": null
-   },
-   {
-    "parameter": "BOD",
-    "parent": "LABTEST|Ganda Nalla Rectangular|00002",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 0.0,
-    "uom": "mg/L"
-   },
-   {
-    "parameter": "COD",
-    "parent": "LABTEST|Ganda Nalla Rectangular|00002",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 0.0,
-    "uom": "mg/L"
-   },
-   {
-    "parameter": "TSS",
-    "parent": "LABTEST|Ganda Nalla Rectangular|00002",
-    "parentfield": "parameters_list",
-    "parenttype": "Lab Test Results",
-    "test_value": 0.0,
-    "uom": "mg/L"
-   }
-  ],
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "project": "Ganda Nalla Rectangular",
-  "sample_collected_by": "satish",
-  "sample_date_time": "2021-01-08 19:26:41",
-  "sample_reference": null,
-  "sample_report_copy": null,
-  "sampling_company": null,
-  "sampling_location": "Inlet",
-  "site_gps_photo": "/files/Screenshot from 2020-08-13 11-40-22.png",
-  "subjective_parameter_lab_test_results": [
-   {
-    "parent": "LABTEST|Ganda Nalla Rectangular|00002",
     "parentfield": "subjective_parameter_lab_test_results",
     "parenttype": "Lab Test Results",
     "subjective_parameter": "Plant Odour Status",
@@ -601,7 +408,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "project": "Pankhi - Triangular",
+  "project": "Pankhi nala",
   "sample_collected_by": "Shashikanta",
   "sample_date_time": "2021-01-27 16:45:02",
   "sample_reference": "BIOX-23/21/1/21",
@@ -749,7 +556,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "project": "Pankhi - Triangular",
+  "project": "Pankhi nala",
   "sample_collected_by": "SS",
   "sample_date_time": "2021-01-27 16:55:48",
   "sample_reference": "XYZ",
@@ -897,7 +704,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "project": "Pankhi - Triangular",
+  "project": "Pankhi nala",
   "sample_collected_by": "SIVA SANKARAN",
   "sample_date_time": "2021-01-28 13:38:33",
   "sample_reference": "BXG/ VNS/ RAJGHAT/28012021",

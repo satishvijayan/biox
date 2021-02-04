@@ -1,46 +1,13 @@
 [
  {
-  "docstatus": 1,
-  "doctype": "Subjective Parameter Lab Test Results",
-  "modified": "2021-01-06 18:20:19.612544",
-  "name": "dc26ab71a7",
-  "parent": "LABTEST|Pankhi - Triangular|00005",
-  "parentfield": "subjective_parameter_lab_test_results",
-  "parenttype": "Lab Test Results",
-  "subjective_parameter": "Surrounding Greenery",
-  "test_result": null
- },
- {
   "docstatus": 0,
   "doctype": "Subjective Parameter Lab Test Results",
-  "modified": "2021-01-08 23:18:48.236222",
+  "modified": "2021-02-04 11:24:22.606447",
   "name": "108bd4c657",
   "parent": "LABTEST|Pankhi - Triangular|00006",
   "parentfield": "subjective_parameter_lab_test_results",
   "parenttype": "Lab Test Results",
   "subjective_parameter": "Surrounding Greenery",
-  "test_result": null
- },
- {
-  "docstatus": 1,
-  "doctype": "Subjective Parameter Lab Test Results",
-  "modified": "2021-01-08 11:29:10.804983",
-  "name": "e86746745d",
-  "parent": "LABTEST|Ganda Nalla Rectangular|00001",
-  "parentfield": "subjective_parameter_lab_test_results",
-  "parenttype": "Lab Test Results",
-  "subjective_parameter": "Plant Odour Status",
-  "test_result": null
- },
- {
-  "docstatus": 1,
-  "doctype": "Subjective Parameter Lab Test Results",
-  "modified": "2021-01-08 19:27:52.780988",
-  "name": "7c218250a3",
-  "parent": "LABTEST|Ganda Nalla Rectangular|00002",
-  "parentfield": "subjective_parameter_lab_test_results",
-  "parenttype": "Lab Test Results",
-  "subjective_parameter": "Plant Odour Status",
   "test_result": null
  },
  {
@@ -77,20 +44,9 @@
   "test_result": null
  },
  {
-  "docstatus": 1,
-  "doctype": "Subjective Parameter Lab Test Results",
-  "modified": "2021-01-06 18:20:19.612544",
-  "name": "38dbce204b",
-  "parent": "LABTEST|Pankhi - Triangular|00005",
-  "parentfield": "subjective_parameter_lab_test_results",
-  "parenttype": "Lab Test Results",
-  "subjective_parameter": "Plant Odour Status",
-  "test_result": null
- },
- {
   "docstatus": 0,
   "doctype": "Subjective Parameter Lab Test Results",
-  "modified": "2021-01-08 23:18:48.236222",
+  "modified": "2021-02-04 11:24:22.606447",
   "name": "2576345785",
   "parent": "LABTEST|Pankhi - Triangular|00006",
   "parentfield": "subjective_parameter_lab_test_results",
