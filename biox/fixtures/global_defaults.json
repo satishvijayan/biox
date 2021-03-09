@@ -1,0 +1,19 @@
+[
+ {
+  "country": "India",
+  "current_fiscal_year": "2021-22",
+  "default_company": "Biox",
+  "default_currency": "INR",
+  "default_distance_unit": null,
+  "disable_in_words": 0,
+  "disable_rounded_total": 0,
+  "docstatus": 0,
+  "doctype": "Global Defaults",
+  "hide_currency_symbol": "",
+  "modified": "2021-02-03 16:04:55.688587",
+  "name": "Global Defaults",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

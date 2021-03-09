@@ -1,0 +1,64 @@
+[
+ {
+  "auto_created": 0,
+  "companies": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Fiscal Year",
+  "is_short_year": 0,
+  "modified": "2020-12-16 12:45:17.400807",
+  "name": "2019-2020",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "year": "2019-2020",
+  "year_end_date": "2020-03-31",
+  "year_start_date": "2019-04-01"
+ },
+ {
+  "auto_created": 0,
+  "companies": [
+   {
+    "company": "Biox",
+    "parent": "2020-21",
+    "parentfield": "companies",
+    "parenttype": "Fiscal Year"
+   }
+  ],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Fiscal Year",
+  "is_short_year": 0,
+  "modified": "2021-01-08 21:37:44.134640",
+  "name": "2020-21",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "year": "2020-21",
+  "year_end_date": "2021-03-31",
+  "year_start_date": "2020-04-01"
+ },
+ {
+  "auto_created": 0,
+  "companies": [
+   {
+    "company": "Biox",
+    "parent": "2021-22",
+    "parentfield": "companies",
+    "parenttype": "Fiscal Year"
+   }
+  ],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Fiscal Year",
+  "is_short_year": 0,
+  "modified": "2021-01-08 21:38:17.772404",
+  "name": "2021-22",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "year": "2021-22",
+  "year_end_date": "2022-03-31",
+  "year_start_date": "2021-04-01"
+ }
+]

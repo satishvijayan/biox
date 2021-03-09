@@ -1,0 +1,27 @@
+{
+ "add_total_row": 1,
+ "creation": "2021-03-06 16:22:39.460524",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-03-06  15:54:55.255947",
+ "modified_by": "Administrator",
+ "module": "Projects",
+ "name": "Monthly Measurement Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Water Height Measurement",
+ "report_name": "Monthly Measurement Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Biox Project User"
+  },
+  {
+   "role": "Accounts User"
+  }
+ ]
+}

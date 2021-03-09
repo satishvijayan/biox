@@ -1,0 +1,66 @@
+<!-- <style>
+	.print-format table, .print-format tr,
+	.print-format td, .print-format div, .print-format p {
+	    font-family: Monospace;
+	    line-height: 100%;
+	    vertical-align: middle;
+	}
+	@media screen {
+	    .print-format {
+	        width: 33.1in;
+	        padding: 0.25in;
+	        min-height: 46.8<style>
+	.print-format table, .print-format tr,
+	.print-format td, .print-format div, .print-format p {
+	    font-family: Monospace;
+	    line-height: 200%;
+	    vertical-align: middle;
+	}
+	@media screen {
+	    .print-format {
+	        width: 33.8in;
+	        padding: 0.25in;
+	        min-height: 46.8in;
+	    }
+	}
+	</style>
+	-->
+<div style="margin-bottom: 7px;" class="text-center">
+	{%= frappe.boot.letter_heads[filters.letter_head || frappe.get_doc(":Company", filters.company).default_letter_head || frappe.defaults.get_default("letter_head")] %}
+</div>
+<h2 class="text-center">{%= __("Monthly Measurement Report") %}</h2>
+<h4 class="text-center">{%= (filters.customer || filters.project)  + ", ")  || "" %} </h4>
+<div class="row">
+	<div class="col-xs-6">
+		<h5 class="text-center">
+			{%= dateutil.str_to_user(filters.from_date) %}
+			{%= __("to") %}
+			{%= dateutil.str_to_user(filters.to_date) %}
+		</h5>
+	</div>
+</div>
+<hr>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th style="width: 5%">{%= __("Customer") %}</th>
+			<th style="width: 10%">{%= __("Project") %}</th>
+			<th style="width: 10%">{%= __("Measurement Date") %}</th>
+			<th style="width: 10%">{%= __("Flow Volume") %}</th>
+			<th style="width: 22%">{%= __("Site Image") %}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for(var i=0, l=data.length; i<l; i++) { %}
+		<tr>
+			<td>{%= data[i][__("Customer")] %}</td>
+			<td>{%= data[i][__("Project")] %}</td>
+			<td>{%= dateutil.str_to_user(data[i][__("Measurement Date")]) || __("Total") %}</td>
+			<td style="text-align: right;">{%= data[i][__("Flow Volume")] %}</td>
+			<td>{%= data[i][__("Site Image")] %}</td>
+			
+		</tr>
+		{% } %}
+	</tbody>
+</table>
+<p class="text-right text-muted">Printed On {%= dateutil.str_to_user(dateutil.get_datetime_as_string()) %}</p>
