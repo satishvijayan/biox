@@ -2,6 +2,17 @@
  {
   "docstatus": 0,
   "doctype": "UOM",
+  "modified": "2021-02-09 16:38:29.422731",
+  "must_be_whole_number": 0,
+  "name": "Milligram/Litre",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "uom_name": "Milligram/Litre"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
   "modified": "2020-12-16 12:45:02.681178",
   "must_be_whole_number": 1,
   "name": "Unit",

@@ -1,6 +1,7 @@
 [
  {
   "abbr": "DO2",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -14,6 +15,7 @@
  },
  {
   "abbr": "BOD",
+  "amended_from": null,
   "description": "Biochemical Oxygen Demand",
   "docstatus": 1,
   "doctype": "Parameter",
@@ -27,6 +29,7 @@
  },
  {
   "abbr": "COD",
+  "amended_from": null,
   "description": "Chemical Oxygen Demand",
   "docstatus": 1,
   "doctype": "Parameter",
@@ -40,6 +43,7 @@
  },
  {
   "abbr": "TEMP",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -53,6 +57,7 @@
  },
  {
   "abbr": "TSS",
+  "amended_from": null,
   "description": "Total Suspended Solids",
   "docstatus": 1,
   "doctype": "Parameter",
@@ -66,6 +71,7 @@
  },
  {
   "abbr": "TDS",
+  "amended_from": null,
   "description": "Total Dissolved Solids",
   "docstatus": 1,
   "doctype": "Parameter",
@@ -79,6 +85,7 @@
  },
  {
   "abbr": "HARD",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -92,6 +99,7 @@
  },
  {
   "abbr": "ACACO",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -105,6 +113,7 @@
  },
  {
   "abbr": "ALKCACO",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -118,6 +127,7 @@
  },
  {
   "abbr": "CHLO",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -131,6 +141,7 @@
  },
  {
   "abbr": "CARB",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -144,6 +155,7 @@
  },
  {
   "abbr": "DETER",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -157,6 +169,7 @@
  },
  {
   "abbr": "GREASE",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -170,6 +183,7 @@
  },
  {
   "abbr": "NITR",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -183,6 +197,7 @@
  },
  {
   "abbr": "SULPHIDES",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -196,6 +211,7 @@
  },
  {
   "abbr": "SULPHATES",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -209,6 +225,7 @@
  },
  {
   "abbr": "PHOSP",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -222,6 +239,7 @@
  },
  {
   "abbr": "SCOLL",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -235,6 +253,7 @@
  },
  {
   "abbr": "SREACT",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -248,6 +267,7 @@
  },
  {
   "abbr": "NI",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -261,6 +281,7 @@
  },
  {
   "abbr": "CU",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -274,6 +295,7 @@
  },
  {
   "abbr": "PHEN",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -287,6 +309,7 @@
  },
  {
   "abbr": "CYAN",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -300,6 +323,7 @@
  },
  {
   "abbr": "IRON",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -313,6 +337,7 @@
  },
  {
   "abbr": "CA",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -326,6 +351,7 @@
  },
  {
   "abbr": "MG",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -339,6 +365,7 @@
  },
  {
   "abbr": "MLSS",
+  "amended_from": null,
   "description": "MLSS testing measures the total concentration of mixed liquor suspended (non-soluble) solids in the aeration basin of an activated sludge system. ... High MLSS values can also be attributed to high flows or insufficient settling times.",
   "docstatus": 1,
   "doctype": "Parameter",
@@ -352,6 +379,7 @@
  },
  {
   "abbr": "MLVSS",
+  "amended_from": null,
   "description": "Mixed Liquor Volatile Suspended Solids\nMLSS testing measures the total concentration of mixed liquor suspended (non-soluble) solids in the aeration basin of an activated sludge system. High MLSS values can also be attributed to high flows or insufficient settling times. ..",
   "docstatus": 1,
   "doctype": "Parameter",
@@ -365,6 +393,7 @@
  },
  {
   "abbr": "SVI",
+  "amended_from": null,
   "description": "Sludge Volume Index\nSludge Volume Index, also known as SVI, describes how well the sludge from the aeration tank settles and compacts. It's a common test question on the operator exam, so be sure to absorb this information before your next test, and try these practice problems on your own.",
   "docstatus": 1,
   "doctype": "Parameter",
@@ -378,6 +407,7 @@
  },
  {
   "abbr": "BICARB",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -391,6 +421,7 @@
  },
  {
   "abbr": "TKN",
+  "amended_from": null,
   "description": "Total Kjeldahl Nitrogen",
   "docstatus": 1,
   "doctype": "Parameter",
@@ -404,6 +435,7 @@
  },
  {
   "abbr": "pH",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",
@@ -417,6 +449,7 @@
  },
  {
   "abbr": "O&G",
+  "amended_from": null,
   "description": null,
   "docstatus": 1,
   "doctype": "Parameter",

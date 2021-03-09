@@ -152,8 +152,9 @@ fixtures = [	{
                 }
 		, "Custom Script"
                 , "Property Setter"
+		
 		, {
-			"dt": "Report", "filters":{"name": ["like",("Daily Average Flow")]}
+			"dt": "Report", "filters":{"name": ["in",("Daily Average Flow")]}
 		}
 		, {
 			"dt": "Role", "filters": {"name": ["like", "Biox%"]}
