@@ -2,6 +2,42 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
+  "modified": "2021-02-13 12:37:45.079844",
+  "name": "Biox Project Managers",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Biox Project Managers",
+  "roles": [
+   {
+    "parent": "Biox Project Managers",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects User"
+   },
+   {
+    "parent": "Biox Project Managers",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects Manager"
+   },
+   {
+    "parent": "Biox Project Managers",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Biox Project User"
+   },
+   {
+    "parent": "Biox Project Managers",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Biox Project Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
   "modified": "2021-01-11 11:09:33.311237",
   "name": "Biox Accounts",
   "parent": null,
