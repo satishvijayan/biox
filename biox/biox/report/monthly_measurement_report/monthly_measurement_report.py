@@ -42,19 +42,33 @@ def get_columns(filters):
 			"label": _("Daily Volume"),
 			"fieldtype": "float",
 			"width": 120
-		}
+		},
+		{
+			"fieldname": "num_readings",
+			"label": _("Number of Readings Taken"),
+			"fieldtype": "int",
+			"width": 100
+		},
+
 	]
 
 def get_data(filters):
 	
-	return frappe.db.sql("""
-		select 
-			measurement_date__time, site_gps_image, calculated_daily_volume 
-			from `tabWater Height Measurement` twm 
-			where 
-				twm.docstatus=1
-				and twm.measurement_date__time <= %(to_date) s
-				and twm.measurement_date__time >= %(from_date) s
-				and twm.project like %(project) s
+	filter_doc_status = """ (0, 1) """ if filters.show_drafts == 1 else """ (1)""" ;
 
-		 """,filters, as_dict=1)
+	s_sql =	f""" select  
+						project 
+						, date_format(measurement_date__time,"%%Y-%%m-%%d") as measurement_date__time 
+						, format(avg(calculated_daily_volume),4) as calculated_daily_volume
+						, count(calculated_daily_volume) as num_readings
+						, site_gps_image  
+					from `tabWater Height Measurement`  tw1
+					where 
+					project = \'{filters['project']}\'
+					and tw1.docstatus in {filter_doc_status}
+					and tw1.measurement_date__time between \'{filters['from_date']}\' and \'{filters['to_date']}\'
+					group by project, date_format(measurement_date__time,"%%Y-%%m-%%d")   
+					order by project, measurement_date__time 
+			""";
+	print(s_sql);
+	return frappe.db.sql(s_sql,filters, as_dict=1)

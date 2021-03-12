@@ -10,18 +10,10 @@
  "modified": "2021-03-06  15:54:55.255947",
  "modified_by": "Administrator",
  "module": "Biox",
- "name": "Monthly Measurement Report",
+ "name": "Monthly Flow Summary",
  "owner": "Administrator",
  "prepared_report": 0,
  "ref_doctype": "Water Height Measurement",
- "report_name": "Monthly Measurement Report",
- "report_type": "Script Report",
- "roles": [
-  {
-   "role": "Biox Project User"
-  },
-  {
-   "role": "Accounts User"
-  }
- ]
+ "report_name": "Monthly Flow Summary",
+ "report_type": "Script Report"
 }

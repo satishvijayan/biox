@@ -25,39 +25,34 @@
 	}
 	</style>
 	-->
-<div style="margin-bottom: 7px;" class="text-center">
-	{%= frappe.boot.letter_heads[filters.letter_head || frappe.get_doc(":Company", filters.company).default_letter_head || frappe.defaults.get_default("letter_head")] %}
-</div>
+
 <h2 class="text-center">{%= __("Monthly Measurement Report") %}</h2>
-<h4 class="text-center">{%= (filters.customer || filters.project)  + ", ")  || "" %} </h4>
-<div class="row">
-	<div class="col-xs-6">
-		<h5 class="text-center">
-			{%= dateutil.str_to_user(filters.from_date) %}
-			{%= __("to") %}
-			{%= dateutil.str_to_user(filters.to_date) %}
-		</h5>
-	</div>
-</div>
-<hr>
+<h5 class="text-center">
+	{%= filters.project %}
+	{%= __(": ") %}
+	{%= frappe.datetime.str_to_user(filters.from_date) %}
+	{%= __("to") %}
+	{%= frappe.datetime.str_to_user(filters.to_date) %}
+</h5>
+
 <table class="table table-bordered">
 	<thead>
 		<tr>
-			<th style="width: 5%">{%= __("Customer") %}</th>
-			<th style="width: 10%">{%= __("Project") %}</th>
 			<th style="width: 10%">{%= __("Measurement Date") %}</th>
 			<th style="width: 10%">{%= __("Flow Volume") %}</th>
-			<th style="width: 22%">{%= __("Site Image") %}</th>
+			<th style="width: 22%">{%= __("Site GPS Image") %}</th>
 		</tr>
 	</thead>
 	<tbody>
 		{% for(var i=0, l=data.length; i<l; i++) { %}
 		<tr>
-			<td>{%= data[i][__("Customer")] %}</td>
-			<td>{%= data[i][__("Project")] %}</td>
-			<td>{%= dateutil.str_to_user(data[i][__("Measurement Date")]) || __("Total") %}</td>
-			<td style="text-align: right;">{%= data[i][__("Flow Volume")] %}</td>
-			<td>{%= data[i][__("Site Image")] %}</td>
+			<td>{%= dateutil.str_to_user(data[i][__("measurement_date__time")]) %}</td>
+			<td style="text-align: right;">{%= data[i][__("calculated_daily_volume")] %}</td>
+			<td> 
+				<img 
+					src = {%= data[i][__("site_gps_image")] %}
+					style = "max-height: 200px, width: auto"> 
+			</td>
 			
 		</tr>
 		{% } %}

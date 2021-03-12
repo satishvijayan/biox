@@ -1,0 +1,122 @@
+[
+ {
+  "cards": [
+   {
+    "hidden": 0,
+    "label": "Data Entry",
+    "links": "[\n    {\n        \"description\": \"Water Height Measurement.\",\n        \"label\": \"Water Height Measurement\",\n        \"name\": \"Water Height Measurement\",\n        \"onboard\": 1,\n        \"type\": \"doctype\"\n    },\n    {\n        \"description\": \"Lab Test Results.\",\n        \"label\": \"Lab Test Results\",\n        \"name\": \"Lab Test Results\",\n        \"onboard\": 1,\n        \"type\": \"doctype\"\n    },\n    {\n        \"description\": \"Daily Dosage.\",\n        \"label\": \"Daily Dosage\",\n        \"name\": \"Daily Dosage\",\n        \"type\": \"doctype\"\n    }\n]",
+    "parent": "Biox",
+    "parentfield": "cards",
+    "parenttype": "Desk Page"
+   },
+   {
+    "hidden": 0,
+    "label": "Masters",
+    "links": "[\n    {\n        \"description\": \"Project.\",\n        \"label\": \"Project\",\n        \"name\": \"Project\",\n        \"onboard\": 1,\n        \"type\": \"doctype\"\n    },\n    {\n        \"description\": \"Create and Define Parameters for Lab Tests.\",\n        \"label\": \"Parameter\",\n        \"name\": \"Parameter\",\n        \"onboard\": 1,\n        \"type\": \"doctype\"\n    },\n    {\n        \"description\": \"Lab Test Structure.\",\n        \"label\": \"Lab Test Structure\",\n        \"name\": \"Lab Test Structure\",\n        \"onboard\": 1,\n        \"type\": \"doctype\"\n    },\n    {\n        \"description\": \"Subjective Parameters.\",\n        \"label\": \"Subjective Parameter\",\n        \"name\": \"Subjective Parameter\",\n        \"type\": \"doctype\"\n    },\n    {\n        \"description\": \"Sampling Company.\",\n        \"label\": \"Sampling Company\",\n        \"name\": \"Sampling Company\",\n        \"type\": \"doctype\"\n    },\n    {\n        \"description\": \"Sampling Location.\",\n        \"label\": \"Sampling Location\",\n        \"name\": \"Sampling Location\",\n        \"type\": \"doctype\"\n    },\n    {\n        \"description\": \"Dosing Product.\",\n        \"label\": \"Dosing Product\",\n        \"name\": \"Dosing Product\",\n        \"type\": \"doctype\"\n    }\n]",
+    "parent": "Biox",
+    "parentfield": "cards",
+    "parenttype": "Desk Page"
+   },
+   {
+    "hidden": 0,
+    "label": "Reports",
+    "links": "[\n    {\n        \"doctype\": \"Water Height Measurement\",\n        \"is_query_report\": true,\n        \"label\": \"Monthly Detailed Report\",\n        \"name\": \"Monthly Measurement Report\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    },\n    {\n        \"doctype\": \"Water Height Measurement\",\n        \"is_query_report\": true,\n        \"label\": \"Daily Average Water Volume\",\n        \"name\": \"Daily Average Water Volume\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    },\n    {\n        \"doctype\": \"Water Height Measurement\",\n        \"is_query_report\": true,\n        \"label\": \"Project-wise Monthly Total Flow\",\n        \"name\": \"Monthly Flow Summary\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    }\n]",
+    "parent": "Biox",
+    "parentfield": "cards",
+    "parenttype": "Desk Page"
+   }
+  ],
+  "cards_label": "Biox",
+  "category": "Modules",
+  "charts": [
+   {
+    "chart_name": "Biox",
+    "label": "Water Measurements",
+    "parent": "Biox",
+    "parentfield": "charts",
+    "parenttype": "Desk Page"
+   }
+  ],
+  "charts_label": "Biox",
+  "developer_mode_only": 0,
+  "disable_user_customization": 0,
+  "docstatus": 0,
+  "doctype": "Desk Page",
+  "extends": null,
+  "extends_another_page": 0,
+  "for_user": null,
+  "hide_custom": 1,
+  "is_default": 0,
+  "is_standard": 0,
+  "label": "Biox",
+  "modified": "2021-03-12 14:51:15.331412",
+  "module": "Biox",
+  "name": "Biox",
+  "onboarding": null,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "pin_to_bottom": 0,
+  "pin_to_top": 1,
+  "restrict_to_domain": null,
+  "shortcuts": [
+   {
+    "color": null,
+    "doc_view": "New",
+    "format": null,
+    "icon": null,
+    "label": "Water Measurement",
+    "link_to": "Water Height Measurement",
+    "parent": "Biox",
+    "parentfield": "shortcuts",
+    "parenttype": "Desk Page",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType"
+   },
+   {
+    "color": null,
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "label": "Lab Test Results",
+    "link_to": "Lab Test Results",
+    "parent": "Biox",
+    "parentfield": "shortcuts",
+    "parenttype": "Desk Page",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType"
+   },
+   {
+    "color": null,
+    "doc_view": "New",
+    "format": null,
+    "icon": null,
+    "label": "Daily Dosage",
+    "link_to": "Daily Dosage",
+    "parent": "Biox",
+    "parentfield": "shortcuts",
+    "parenttype": "Desk Page",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType"
+   },
+   {
+    "color": null,
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "label": "Project",
+    "link_to": "Project",
+    "parent": "Biox",
+    "parentfield": "shortcuts",
+    "parenttype": "Desk Page",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType"
+   }
+  ],
+  "shortcuts_label": "Biox"
+ }
+]
