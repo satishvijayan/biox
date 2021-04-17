@@ -3,6 +3,7 @@
 # Satish Vijayan 6/3/21
 # https://github.com/pradeshc/erpnext/blob/client_statement/erpnext/accounts/report/client_statement/client_statement.py
 # https://discuss.erpnext.com/t/script-report-adding-columns-doesnt-reflect/45173/4
+# https://github.com/frappe/datatable/issues/59
 
 from __future__ import unicode_literals
 import frappe
@@ -28,14 +29,14 @@ def get_columns(filters):
 		{
 			"fieldname": "measurement_date__time",
 			"label": _("Measurement Date"),
-			"fieldtype": "Datetime",
-			"width": 200
+			"fieldtype": "Date",
+			"width": 100
 		},
 		{
 			"fieldname": "site_gps_image",
 			"label": _("Site GPS Image"),
 			"fieldtype": "Data",
-			"width": 300
+			"width": 50
 		},
 		{
 			"fieldname": "calculated_daily_volume",
@@ -43,6 +44,7 @@ def get_columns(filters):
 			"fieldtype": "float",
 			"width": 120
 		},
+		
 		{
 			"fieldname": "num_readings",
 			"label": _("Number of Readings Taken"),
@@ -59,7 +61,7 @@ def get_data(filters):
 	s_sql =	f""" select  
 						project 
 						, date_format(measurement_date__time,"%%Y-%%m-%%d") as measurement_date__time 
-						, format(avg(calculated_daily_volume),4) as calculated_daily_volume
+						, format(avg(calculated_daily_volume),2) as calculated_daily_volume
 						, count(calculated_daily_volume) as num_readings
 						, site_gps_image  
 					from `tabWater Height Measurement`  tw1

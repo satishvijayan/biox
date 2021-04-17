@@ -42,13 +42,21 @@ def get_columns(filters):
 			"width": 120
 		},
 		{
-			"fieldname": "calculated_daily_volume",
+			"fieldname": "monthly_volume",
 			"label": _("Monthly Flow (MLD)"),
 			"fieldtype": "float",
 			"width": 120,
 			"precision": 2
-		}		
+		},
+		{
+			"fieldname": "daily_avg_volume",
+			"label": _("Daily Average (MLD)"),
+			"fieldtype": "float",
+			"width": 120,
+			"precision": 2
+		}
 	]
+
 
 def get_data(filters):
 	
@@ -58,9 +66,11 @@ def get_data(filters):
 
 	s_sql = f"""
 			select  
-			twm.project , date_format(twm.measurement_date__time, '%%Y-%%m') as month , 
- 			format(sum(twm.calculated_daily_volume),4)  calculated_daily_volume, 
- 			sum(twm.num_readings) as num_readings 
+			twm.project , date_format(twm.measurement_date__time, '%%Y-%%m') as month
+ 			, format(sum(twm.calculated_daily_volume),1)  as monthly_volume
+ 			, sum(twm.num_readings) as num_readings
+ 			, format(if( sum(twm.num_readings)>0, sum(twm.calculated_daily_volume)/sum(twm.num_readings),0),2)
+ 				as daily_avg_volume
  			from ( 
  					select  
 						docstatus, project 

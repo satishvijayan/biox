@@ -3,13 +3,32 @@
 // https://github.com/pradeshc/erpnext/blob/client_statement/erpnext/accounts/report/client_statement/client_statement.js
 // Sample report
 // # Satish Vijayan 6/3/21
-
-
+// https://github.com/frappe/datatable/issues/59
+// https://maheshlangote.blogspot.com/2018/02/how-to-add-dynamic-columns-in-custom.html
 
 var d = new Date();
 var d1 = new Date(d.getFullYear(),d.getMonth()-1,1);
 
+
 frappe.query_reports["Monthly Measurement Report"] = {
+	on_change: function(report) {
+	    report.page.add_inner_button(__("to_print"), function() {
+			var selected_rows = [];
+  			$('.dt-scrollable').find(":input[type=checkbox]").each((idx, row) => {
+  				if(row.checked){
+			         console.log("*** selected row id : " + idx);
+			         selected_rows.push(frappe.query_report.data[$(row.closest(".dt-cell")).data("row-index")]);
+				}
+			});
+		});
+	},
+
+    get_datatable_options(options) {
+        return Object.assign(options, {
+            checkboxColumn: true
+        });
+    },
+
 	"filters": [
 		
 		{
@@ -34,7 +53,16 @@ frappe.query_reports["Monthly Measurement Report"] = {
 			"reqd": 1,
 			"width": "60px"
 		},
-	]
+		{
+			"fieldname":"show_drafts",
+			"label": __("Include Draft Documents?"),
+			"fieldtype": "Check",
+			"width": "60px"
+		},
+    	
+	]	
+
+  
 }
 
 
