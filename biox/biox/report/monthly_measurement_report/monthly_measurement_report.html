@@ -77,8 +77,9 @@
 							
 			<td>{%= dateutil.str_to_user(data[i][__("measurement_date__time")]) %}</td>
 			<td style="text-align: right;">{%= data[i][__("calculated_daily_volume")] %}</td>
+			{% url_site_gps_image = encodeURIComponent(data[i][__("site_gps_image")]) %}
 			<td> 
-				<img src = {%= data[i][__("site_gps_image")] %} 
+				<img src = {%= url_site_gps_image %} 
 					style = "max-height: 200px, width: auto"> 
 			</td>
 		</tr>
