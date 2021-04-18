@@ -1,1 +1,143 @@
-[]
+[
+ {
+  "add_total_row": 1,
+  "columns": [],
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2021-03-06 15:54:55.255947",
+  "module": "Biox",
+  "name": "Monthly Flow Summary",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Water Height Measurement",
+  "reference_report": null,
+  "report_name": "Monthly Flow Summary",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": []
+ },
+ {
+  "add_total_row": 1,
+  "columns": [],
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2021-03-06 15:54:55.255947",
+  "module": "Biox",
+  "name": "Monthly Measurement Report",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Water Height Measurement",
+  "reference_report": null,
+  "report_name": "Monthly Measurement Report",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Monthly Measurement Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Biox Project User"
+   },
+   {
+    "parent": "Monthly Measurement Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "biox",
+  "modified": "2021-04-18 15:53:59.748569",
+  "module": "Biox",
+  "name": "Average Lab Test Results",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": "select \n    TR.project, date_format(TR.sample_date_time,\"%%Y-%%m\") as Month, TR.parameter, format(avg(TR.test_value),2) as Test_value, \n    format(avg(TR.upper_range),2) as Upper_range, format(avg(TR.lower_range),2) as lower_range \n    from \n    (select  \n        ltr.name, ltr.project, ltr.lab_test_structure, sample_date_time, prv.parameter, prv.test_value, \n        prv.uom,ltsd.lower_range, ltsd.upper_range,ltsd.contracted, ltsd.percent_change \n        from `tabLab Test Results` ltr   \n        left join `tabParameter Result Values` as prv on ltr.name=prv.parent \n        left join \n        (select \n            ts.name as lab_structure, pdv.parameter, pdv.uom, pdv.upper_range, pdv.lower_range,  \n            pdv.percent_change, pdv.contractually_required as Contracted      \n            from `tabLab Test Structure` ts  \n            left join  `tabParameter Detail Values` pdv on ts.name = pdv.parent order by ts.name)  as ltsd \n        on ltr.lab_test_structure = ltsd.lab_structure and prv.parameter=ltsd.parameter) TR \n    group by  TR.project, TR.parameter, Month order by Month;",
+  "ref_doctype": "Lab Test Results",
+  "reference_report": null,
+  "report_name": "Average Lab Test Results",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Average Lab Test Results",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Biox Project User"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "biox",
+  "modified": "2021-04-18 18:23:22.018933",
+  "module": "Biox",
+  "name": "Master Data Check",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": "select  \n    p.customer, p.name as Project, date_format(p.creation,\"%%y-%%m-%%d\") `Created on`, \n    p.sales_order, lts.name as 'Lab Structure', W.num_water as \"# of Height Measurements\", LTR.Num_Tests as \"# of Lab Test Results\" \nfrom tabProject p \nleft join `tabLab Test Structure` lts  on p.name = lts.project \nleft join  (select project,  count(height) as Num_water from `tabWater Height Measurement` group by project) W on p.name = W.project \nleft join (select project, count(sample_date_time) as Num_Tests from `tabLab Test Results`) LTR on p.name = LTR.project\n\norder by p.customer, p.name;\n",
+  "ref_doctype": "Project",
+  "reference_report": null,
+  "report_name": "Master Data Check",
+  "report_script": "select  \n    p.name as Project, \n    date_format(p.creation,\"%%y-%%m-%%d\") `Created on`,p.customer, p.sales_order, \n    lts.name as 'Lab Structure', W.num_water , LTR.Num_Tests \nfrom tabProject p \nleft join `tabLab Test Structure` lts  on p.name = lts.project \nleft join (select project,  count(height) as Num_water from `tabWater Height Measurement` group by project) W on p.name = W.project \nleft join (select project, count(sample_date_time) as Num_Tests from `tabLab Test Results`) LTR on p.name = LTR.project;\n",
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Master Data Check",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Projects User"
+   },
+   {
+    "parent": "Master Data Check",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Projects Manager"
+   }
+  ]
+ }
+]
