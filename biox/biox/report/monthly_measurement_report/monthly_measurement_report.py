@@ -46,6 +46,12 @@ def get_columns(filters):
 			"fieldtype": "int",
 			"width": 100
 		},
+		{
+			"fieldname": "site_gps_image",
+			"label": _("Image File Location"),
+			"fieldtype": "data",
+			"width": 100
+		},
 
 	]
 
