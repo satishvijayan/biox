@@ -37,7 +37,7 @@ def get_columns(filters):
 			"fieldname": "calculated_daily_volume",
 			"label": _("Daily Volume"),
 			"fieldtype": "float",
-			"width": 100
+			"width": 120
 		},
 		
 		{
@@ -46,23 +46,12 @@ def get_columns(filters):
 			"fieldtype": "int",
 			"width": 100
 		},
-		{
-			"fieldname": "site_gps_image",
-			"label": _("Site GPS Image"),
-			"fieldtype": "Data",
-			"width": 50
-		},
 
 	]
 
 def get_data(filters):
 	
-	filter_doc_status = """ ({
-			"fieldname": "site_gps_image",
-			"label": _("Site GPS Image"),
-			"fieldtype": "Data",
-			"width": 50
-		},0, 1) """ if filters.show_drafts == 1 else """ (1)""" ;
+	filter_doc_status = """ (0, 1) """ if filters.show_drafts == 1 else """ (1)""" ;
 
 	s_sql =	f""" select  
 						project 
