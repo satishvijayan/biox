@@ -4,7 +4,8 @@
 # https://github.com/pradeshc/erpnext/blob/client_statement/erpnext/accounts/report/client_statement/client_statement.py
 # https://discuss.erpnext.com/t/script-report-adding-columns-doesnt-reflect/45173/4
 # https://github.com/frappe/datatable/issues/59
-
+# https://discuss.erpnext.com/t/script-report-python-file-returns-advanced-use/33489/5
+# https://discuss.erpnext.com/t/issue-with-treeview-in-frappe-datatable/45207/11
 from __future__ import unicode_literals
 import frappe
 from frappe import _, _dict
@@ -33,16 +34,10 @@ def get_columns(filters):
 			"width": 100
 		},
 		{
-			"fieldname": "site_gps_image",
-			"label": _("Site GPS Image"),
-			"fieldtype": "Data",
-			"width": 50
-		},
-		{
 			"fieldname": "calculated_daily_volume",
 			"label": _("Daily Volume"),
 			"fieldtype": "float",
-			"width": 120
+			"width": 100
 		},
 		
 		{
@@ -51,12 +46,23 @@ def get_columns(filters):
 			"fieldtype": "int",
 			"width": 100
 		},
+		{
+			"fieldname": "site_gps_image",
+			"label": _("Site GPS Image"),
+			"fieldtype": "Data",
+			"width": 50
+		},
 
 	]
 
 def get_data(filters):
 	
-	filter_doc_status = """ (0, 1) """ if filters.show_drafts == 1 else """ (1)""" ;
+	filter_doc_status = """ ({
+			"fieldname": "site_gps_image",
+			"label": _("Site GPS Image"),
+			"fieldtype": "Data",
+			"width": 50
+		},0, 1) """ if filters.show_drafts == 1 else """ (1)""" ;
 
 	s_sql =	f""" select  
 						project 

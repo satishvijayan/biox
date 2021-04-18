@@ -43,7 +43,6 @@
 		<tr>
 			<th style="width: 10%">{%= __("Date") %}</th>
 			<th style="width: 10%">{%= __("Daily Flow Volume (MLD)") %}</th>
-			<th style="width: 22%">{%= __("# of readings") %}</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -51,7 +50,6 @@
 		<tr>
 			<td>{%= dateutil.str_to_user(data[i][__("measurement_date__time")]) %}</td>
 			<td style="text-align: right;">{%= data[i][__("calculated_daily_volume")] %}</td>
-			<td style="text-align: right;">{%= data[i][__("num_readings")] %}</td>
 		</tr>	
 		{% } %}	
 	</tbody>
