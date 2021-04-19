@@ -20,7 +20,7 @@
    {
     "hidden": 0,
     "label": "Reports",
-    "links": "[\n    {\n        \"doctype\": \"Water Height Measurement\",\n        \"is_query_report\": true,\n        \"label\": \"Monthly Detailed Report\",\n        \"name\": \"Monthly Measurement Report\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    },\n    {\n        \"doctype\": \"Water Height Measurement\",\n        \"is_query_report\": true,\n        \"label\": \"Daily Average Water Volume\",\n        \"name\": \"Daily Average Water Volume\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    },\n    {\n        \"doctype\": \"Water Height Measurement\",\n        \"is_query_report\": true,\n        \"label\": \"Project-wise Monthly Total Flow\",\n        \"name\": \"Monthly Flow Summary\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    }\n]",
+    "links": "[\n    {\n        \"doctype\": \"Project\",\n        \"is_query_report\": true,\n        \"label\": \"Project Overview Report\",\n        \"name\": \"Project Dashboard Report 1\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    },\n    {\n        \"doctype\": \"Project\",\n        \"is_query_report\": true,\n        \"label\": \"Verify Project-Master Data Setup\",\n        \"name\": \"Master Data Check\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    },\n    {\n        \"doctype\": \"Water Height Measurement\",\n        \"is_query_report\": true,\n        \"label\": \"Monthly Detailed Report\",\n        \"name\": \"Monthly Measurement Report\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    },\n    {\n        \"doctype\": \"Water Height Measurement\",\n        \"is_query_report\": true,\n        \"label\": \"Daily Average Water Volume\",\n        \"name\": \"Daily Average Water Volume\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    },\n    {\n        \"doctype\": \"Water Height Measurement\",\n        \"is_query_report\": true,\n        \"label\": \"Project-wise Monthly Total Flow\",\n        \"name\": \"Monthly Flow Summary\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    },\n    {\n        \"doctype\": \"Lab Test Results\",\n        \"is_query_report\": true,\n        \"label\": \"Project-wise Monthly Test Results\",\n        \"name\": \"Average Lab Test Results\",\n        \"onboard\": 1,\n        \"type\": \"report\"\n    }\n    \n]",
     "parent": "Biox",
     "parentfield": "cards",
     "parenttype": "Desk Page"
@@ -30,14 +30,14 @@
   "category": "Modules",
   "charts": [
    {
-    "chart_name": "Biox",
+    "chart_name": "Water Height",
     "label": "Water Measurements",
     "parent": "Biox",
     "parentfield": "charts",
     "parenttype": "Desk Page"
    }
   ],
-  "charts_label": "Biox",
+  "charts_label": "",
   "developer_mode_only": 0,
   "disable_user_customization": 0,
   "docstatus": 0,
@@ -49,7 +49,7 @@
   "is_default": 0,
   "is_standard": 0,
   "label": "Biox",
-  "modified": "2021-03-12 14:51:15.331412",
+  "modified": "2021-04-19 12:12:24.547722",
   "module": "Biox",
   "name": "Biox",
   "onboarding": null,

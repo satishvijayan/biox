@@ -154,7 +154,7 @@ fixtures = [	{
                 , "Property Setter"
 		
 		, {
-			"dt": "Report", "filters":{"name": ["in",("Daily Average Flow")]}
+			"dt": "Report", "filters":{"Module": ["in",("Biox")]}
 		}
 		, {
 			"dt": "Role", "filters": {"name": ["like", "Biox%"]}
