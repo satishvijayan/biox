@@ -1,4 +1,5 @@
-<!-- <style>
+<!-- https://github.com/sbkolate/erpnext_print_format/blob/master/header_footer/quotation.html#L9-L18 -->
+<style>
 	.print-format table, .print-format tr,
 	.print-format td, .print-format div, .print-format p {
 	    font-family: Monospace;
@@ -29,11 +30,10 @@
 	        page-break-inside: avoid !important;
 	    }
 	}
-	</style>
-	-->
+</style>
 
-<p class="c1"><span style=""><img alt="" src="files/image1.png" style="" title=""><HR></span></p>
-
+<!-- <p class="c1"><span style=""><img alt="" src="files/image1.png" style="" title=""><HR></span></p>
+-->
 <div>
 	<p class="c2"><span class="c0"></span></p>
 </div>
@@ -64,29 +64,29 @@
 </table>
 
 <p style="page-break-after: always;">&nbsp;</p>
+<h3 class="text-center">{%= __("Site Photos with GPS Location") %}</h3>
 
-<h3 class="text-center">{%= __("Selected Images from Site") %}</h3>
-	{% var rows = frappe.query_report.datatable.rowmanager.getCheckedRows() %}
-	{% rows.forEach(function(item, index) { %}
-		{% i = parseInt(item,10)  %}			
-		{% if ( i>1 && i%2 == 0 ) { %} 
-			<p style="page-break-after: always;">&nbsp;</p>
-			<h3 class="text-center">{%= __("Selected Images from Site") %}</h3>
-		{% } %} 
-		<!--   testing for page break-->
-		<p>
-			<div style="max-width: 50%; margin-right: 10px;">
-				{%= __("Date: ") %} {%= dateutil.str_to_user(data[i][__("measurement_date__time")]) %}
-				{%= __("Daily Volume: ") %} {%= data[i][__("calculated_daily_volume")] %}
-				{% url_site_gps_image = encodeURIComponent(data[i][__("site_gps_image")]) %}
-			</div>
-		
-			<div style="max-width: 50%; margin-right: 10px;">
-					<img src = {%= url_site_gps_image %} 
-					style="width: 100%" >
-			</div>
-			<p></p>
-		</p>
-	{% }) %}
+{% var rows = frappe.query_report.datatable.rowmanager.getCheckedRows() %}
+{% rows.forEach(function(item, index) { %}
+	{% i = parseInt(item,10)  %}			
+	{% if ( i>1 && i%2 == 0 ) { %} 
+		<p style="page-break-after: always;">&nbsp;</p>
+		<h3 class="text-center">{%= __("Site Photos with GPS Location") %}</h3>
+	{% } %} 
+	<!--   testing for page break-->
+	<p>
+		<div style="max-width: 50%; margin-right: 10px;font-size: 20px">
+			{%= __("Date: ") %} {%= dateutil.str_to_user(data[i][__("measurement_date__time")]) %}
+			{%= __("Daily Volume: ") %} {%= data[i][__("calculated_daily_volume")] %}
+			{% url_site_gps_image = encodeURIComponent(data[i][__("site_gps_image")]) %}
+		</div>
+	
+		<div style="max-width: 70%; margin-right: 10px;">
+				<img src = {%= url_site_gps_image %} 
+				style="width: 100%" >
+		</div>
+		<br>
+	</p>
+{% }) %}
 
 <p class="text-right text-muted">Printed On {%= dateutil.str_to_user(dateutil.get_datetime_as_string()) %}</p>
