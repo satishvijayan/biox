@@ -32,7 +32,6 @@ def get_columns(filters):
 			"fieldname": "project",
 			"label": _("Project"),
 			"fieldtype": "data",
-			
 			"width": 120
 		},
 		{
@@ -51,19 +50,22 @@ def get_columns(filters):
 			"fieldname": "Month_Result",
 			"label": _("Month Result"),
 			"fieldtype": "float",
-			"width": 100
+			"width": 100,
+			"align":"right"
 		},
 		{
 			"fieldname": "UOM",
 			"label": _("UOM"),
 			"fieldtype": "data",
-			"width": 80
+			"width": 80,
+			"align":"middle"
 		},
 		{
 			"fieldname": "Num_Samples",
 			"label": _("Samples Taken"),
 			"fieldtype": "int",
-			"width": 80
+			"width": 80,
+			"padding": "0.75rem"
 		},
 		
 
