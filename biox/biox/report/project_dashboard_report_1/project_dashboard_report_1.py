@@ -65,7 +65,7 @@ def get_columns(filters):
 			"label": _("Samples Taken"),
 			"fieldtype": "int",
 			"width": 80,
-			"padding": "0.75rem"
+			"align": "left"
 		},
 		
 
