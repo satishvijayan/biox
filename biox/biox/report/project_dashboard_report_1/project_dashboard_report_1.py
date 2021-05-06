@@ -41,6 +41,12 @@ def get_columns(filters):
 			"width": 80
 		},
 		{
+			"fieldname": "sampling_location",
+			"label": _("Location"),
+			"fieldtype": "data",
+			"width": 80
+		},
+		{
 			"fieldname": "parameter",
 			"label": _("Parameter"),
 			"fieldtype": "data",
@@ -82,34 +88,39 @@ def get_data(filters):
 	
 	#frappe.show_alert(project_filter + "|" + customer_filter, 20);
 	water_flow_name = "Month Flow"
+	water_flow_location = "Outlet"
 	
 	s_sql =	f""" 
 				select p.customer, Dash_report.* from 
 				( 
 					select 
-						ltr.project as project, 
-						date_format(sample_date_time,'%%Y-%%m') as Month, 
-						prv.parameter as parameter, 
-						format(avg(prv.test_value),2) as Month_Result,
-						prv.uom as UOM,
-						count(prv.test_value) as Num_Samples
+						ltr.project as project
+						, date_format(sample_date_time
+						, '%%Y-%%m') as Month
+						, sampling_location
+						, prv.parameter as parameter
+						, format(avg(prv.test_value),2) as Month_Result
+						, prv.uom as UOM
+						, count(prv.test_value) as Num_Samples
 					from `tabLab Test Results` ltr 
 					left join `tabParameter Result Values` as prv on ltr.name=prv.parent
 					where 
 						ltr.docstatus in {filter_doc_status}
 						and ltr.sample_date_time between \'{filters['from_date']}\' and \'{filters['to_date']}\'
 						and ltr.project like {project_filter}
-					group by project, Month,  parameter, UOM 
+					group by project, Month,  parameter, UOM , sampling_location
 
 				union
 
 					select 
-						dly.project as project, 
-						date_format(dly.Measurement_day,"%%Y-%%m") as Month, 
-						\'{water_flow_name}\' as parameter, 
-						format(sum(calculated_daily_volume),0) as Month_Result, 
-						"MLD" as UOM,
-						count(calculated_daily_volume) as Num_Samples
+						dly.project as project
+						, date_format(dly.Measurement_day
+						, "%%Y-%%m") as Month
+						, \'{water_flow_location}\' as sampling_location
+						, \'{water_flow_name}\' as parameter 
+						, format(sum(calculated_daily_volume),0) as Month_Result
+						, "MLD" as UOM
+						, count(calculated_daily_volume) as Num_Samples
 					from 
 					(
 						select  
