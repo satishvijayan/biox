@@ -2,6 +2,36 @@
  {
   "docstatus": 0,
   "doctype": "Sampling Company",
+  "modified": "2021-04-19 16:58:27.963052",
+  "name": "Econ Lab",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "sampling_company": "Econ Lab"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Sampling Company",
+  "modified": "2021-04-19 17:18:05.861825",
+  "name": "Amar Lab",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "sampling_company": "Amar Lab"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Sampling Company",
+  "modified": "2021-04-19 17:18:26.403621",
+  "name": "Silkon Lab Varanasi",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "sampling_company": "Silkon Lab Varanasi"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Sampling Company",
   "modified": "2021-01-13 07:21:20.532527",
   "name": "Biox",
   "parent": null,
