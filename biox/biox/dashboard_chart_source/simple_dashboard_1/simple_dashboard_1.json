@@ -1,0 +1,13 @@
+{
+ "creation": "2021-05-06 16:16:10.983472",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-05-06 16:16:10.983472",
+ "modified_by": "Administrator",
+ "module": "Biox",
+ "name": "Simple Dashboard 1",
+ "owner": "Administrator",
+ "source_name": "Simple Dashboard 1",
+ "timeseries": 0
+}
