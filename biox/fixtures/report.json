@@ -1,5 +1,131 @@
 [
  {
+  "add_total_row": 0,
+  "columns": [
+   {
+    "fieldname": "customer",
+    "fieldtype": "Link",
+    "label": "Customer",
+    "options": "Customer",
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "project",
+    "fieldtype": "Link",
+    "label": "Project",
+    "options": "project",
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "monthly_volume",
+    "fieldtype": "Float",
+    "label": "Flow",
+    "options": null,
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "num_readings",
+    "fieldtype": "Int",
+    "label": "Number of Readings",
+    "options": null,
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   }
+  ],
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "fieldname": "project",
+    "fieldtype": "Link",
+    "label": "Project",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "fieldname": "customer",
+    "fieldtype": "Link",
+    "label": "Customer",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "From Date",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "To Date",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "biox",
+  "modified": "2021-05-09 22:08:47.649772",
+  "module": "Biox",
+  "name": "Biox-Dashboard-Flow",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": "select  \n    twm.customer as customer\n    , twm.project  as project\n    , round(sum(twm.calculated_daily_volume),0)  as volume\n    , sum(num_readings) as 'num_readings'\nfrom \n   ( \n    select  \n        tw1.project\n        , p.customer\n        , tw1.docstatus\n        , date_format(measurement_date__time,\"%%Y-%%m-%%d\") as date\n    \t, count(calculated_daily_volume) as num_readings\n    \t, format(avg(calculated_daily_volume),4) as calculated_daily_volume \n    from `tabWater Height Measurement`  tw1\n    left join tabProject p on p.name = tw1.project \n    group by tw1.project, date_format(measurement_date__time,\"%%Y-%%m-%%d\")\n    )\n as twm\ngroup by customer, project\norder by customer, project",
+  "ref_doctype": "Water Height Measurement",
+  "reference_report": null,
+  "report_name": "Biox-Dashboard-Flow",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Biox Project User"
+   },
+   {
+    "parent": "Biox-Dashboard-Flow",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Biox Project Manager"
+   }
+  ]
+ },
+ {
   "add_total_row": 1,
   "columns": [],
   "disable_prepared_report": 0,
