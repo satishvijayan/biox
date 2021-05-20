@@ -1,12 +1,12 @@
 frappe.provide('frappe.dashboards.chart_sources');
 // frappe.provide('frappe.query_report')
 var d = new Date();
-var m = 1
+var m = 3
 var d1 = new Date(d.getFullYear(),d.getMonth()-m,1);
 
-frappe.dashboards.chart_sources["Simple Dashboard 1"] = {
+frappe.dashboards.chart_sources["Test Dashboard 1"] = {
 
-	method: "biox.biox.dashboard_chart_source.simple_dashboard_1.simple_dashboard_1.get",
+	method: "biox.biox.dashboard_chart_source.test_dashboard_1.test_dashboard_1.get",
 	filters: [
 		{
 			fieldname: "customer",
