@@ -150,7 +150,7 @@ fixtures = [	{
 		, {
                 "dt": "Custom Field", "filters": {"dt" : ["in", ("Project")]}
                 }
-		, "Custom Script"
+		, "Client Script"
                 , "Property Setter"
 		
 		, {
@@ -166,7 +166,7 @@ fixtures = [	{
 		"dt": "Role Profile", "filters":{"name": ["like", "Biox%"]}
 		}
 		,{
-			"dt": "Desk Page", "filters":{"name":["like","Biox"]}
+			"dt": "Workspace", "filters":{"name":["like","Biox"]}
 		}
 		,"UOM"
 		,"Parameter"
