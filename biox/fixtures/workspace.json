@@ -2,15 +2,7 @@
  {
   "cards_label": "Data Entry and Reports",
   "category": "Modules",
-  "charts": [
-   {
-    "chart_name": "Flow Dashboard",
-    "label": "Flow Volume",
-    "parent": "Biox",
-    "parentfield": "charts",
-    "parenttype": "Workspace"
-   }
-  ],
+  "charts": [],
   "charts_label": "",
   "developer_mode_only": 0,
   "disable_user_customization": 0,
@@ -45,7 +37,7 @@
     "hidden": 0,
     "icon": null,
     "is_query_report": 0,
-    "label": "Water Height Measurement",
+    "label": "Flow Measurement",
     "link_to": "Water Height Measurement",
     "link_type": "DocType",
     "onboard": 0,
@@ -240,7 +232,7 @@
     "hidden": 0,
     "icon": null,
     "is_query_report": 1,
-    "label": "Daily Average Water Volume",
+    "label": "Daily Average Flow Volume",
     "link_to": "Daily Average Water Volume",
     "link_type": "Report",
     "onboard": 0,
@@ -281,7 +273,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2021-06-11 18:35:29.082809",
+  "modified": "2021-06-19 00:09:25.907272",
   "module": "Biox",
   "name": "Biox",
   "onboarding": null,
@@ -297,7 +289,7 @@
     "doc_view": "New",
     "format": null,
     "icon": null,
-    "label": "Water Measurement",
+    "label": "Flow Measurement",
     "link_to": "Water Height Measurement",
     "parent": "Biox",
     "parentfield": "shortcuts",
