@@ -68,7 +68,7 @@ def get_columns(filters):
 		},
 		{
 			"fieldname": "Num_Samples",
-			"label": _("# of Samples"),
+			"label": _("Sample Count"),
 			"fieldtype": "int",
 			"width": 80,
 			"align": "left"
