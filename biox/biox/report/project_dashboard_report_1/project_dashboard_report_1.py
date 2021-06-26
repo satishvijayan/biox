@@ -36,7 +36,7 @@ def get_columns(filters):
 		},
 		{
 			"fieldname": "Month",
-			"label": _("Period"),
+			"label": _("Month"),
 			"fieldtype": "data",
 			"width": 80
 		},
@@ -68,13 +68,19 @@ def get_columns(filters):
 		},
 		{
 			"fieldname": "Num_Samples",
-			"label": _("Samples Taken"),
+			"label": _("# of Samples"),
 			"fieldtype": "int",
 			"width": 80,
 			"align": "left"
 		},
+		{
+			"fieldname": "Daily_Average",
+			"label": _("Daily Average"),
+			"fieldtype": "float",
+			"width": 100,
+			"align":"right"
+		},
 		
-
 	]
 
 def get_data(filters):
@@ -102,6 +108,7 @@ def get_data(filters):
 						, format(avg(prv.test_value),2) as Month_Result
 						, prv.uom as UOM
 						, count(prv.test_value) as Num_Samples
+						, format(avg(prv.test_value),2) as Daily_Average
 					from `tabLab Test Results` ltr 
 					left join `tabParameter Result Values` as prv on ltr.name=prv.parent
 					where 
@@ -121,6 +128,7 @@ def get_data(filters):
 						, format(sum(calculated_daily_volume),0) as Month_Result
 						, "MLD" as UOM
 						, count(calculated_daily_volume) as Num_Samples
+						, format(avg(calculated_daily_volume),0) as Daily_Average
 					from 
 					(
 						select  

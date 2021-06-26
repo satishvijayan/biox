@@ -4,3 +4,4 @@
 *.swp
 tags
 biox/docs/current
+biox/templates/pages/__pycache__/
