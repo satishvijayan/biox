@@ -151,7 +151,7 @@ fixtures = [	{
                 "dt": "Custom Field", "filters": {"dt" : ["in", ("Project")]}
                 }
 		, "Client Script"
-                , "Property Setter"
+        , "Property Setter"
 		
 		, {
 			"dt": "Report", "filters":{"Module": ["in",("Biox")]}
