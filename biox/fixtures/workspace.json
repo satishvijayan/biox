@@ -273,7 +273,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2021-06-19 00:09:25.907272",
+  "modified": "2021-07-11 17:21:23.188401",
   "module": "Biox",
   "name": "Biox",
   "onboarding": null,
@@ -339,6 +339,20 @@
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "DocType"
+   },
+   {
+    "color": null,
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "label": "Dashboard Page",
+    "link_to": "biox-dashboard",
+    "parent": "Biox",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Page"
    }
   ],
   "shortcuts_label": "Quick Entry"
