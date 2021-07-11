@@ -1,0 +1,102 @@
+<style>
+.dashboard-brick {
+  background-color: aliceblue;
+  text-align: center;
+  vertical-align: middle;
+  height: 100px;
+  display: table;
+  width: 100%;
+  color: black;
+}    
+
+.dashboard-brick span {
+  vertical-align:middle;
+  display: table-cell;
+}
+h6 { text-indent: 5px; }
+
+</style>
+<style>
+.chart-container {
+  background-color: ghostwhite;
+  height: auto;
+  width: auto;
+}
+
+</style>
+<style>
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px ghostwhite;
+}  
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 
+</style>
+<style>
+.border {
+  background-color: aliceblue;
+}
+.grid-box{ 
+  background: aliceblue;
+  vertical-align: middle;
+  display:  ;
+  padding: 5px 5px 5px 5px;
+}
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto,2fr));
+  grid-template-rows: minmax(50px, auto);
+  grid-gap: 1px;
+}
+.grid-wrapper > div {
+  background-color: white;
+  padding: 10px;
+}
+</style>
+
+<div style="margin: 5px;">
+  <div class="section-body">
+    <div class="row">
+      <div class="form-column col-sm-3">
+        <div class="dashboard-brick">
+          <span>
+            <p align=center><b> {{ __("Overview") }}</b></p>
+            <div class="get_project_stats">
+              <h6>-</h6>
+            </div>
+          </span>
+        </div>
+      </div>
+      
+      <div class="form-column col-sm-3">
+        <div class="dashboard-brick">
+          <span>
+            <p align=center><b> {{ __("Data Issues") }}</b></p>
+            <div class="master_data_issues"><h1>-</h1></div>
+          </span>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+    
+  </div>
+</div>
+<div style="margin: 5px;">
+  <span>
+    <H2><div align=center><b> {{ __("Project-Wise Test Results") }}</b></div></H2>
+  </span>
+  <div class="border">    
+    <div class="grid-wrapper">
+    </div>
+  </div>
+  
+
+
+</div>

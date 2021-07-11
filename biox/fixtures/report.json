@@ -305,5 +305,205 @@
     "role": "Projects Manager"
    }
   ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [
+   {
+    "fieldname": "name",
+    "fieldtype": "Link",
+    "label": "Project",
+    "options": "Project",
+    "parent": "Missing Customer",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "customer",
+    "fieldtype": "Data",
+    "label": "Customer",
+    "options": null,
+    "parent": "Missing Customer",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   }
+  ],
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "biox",
+  "modified": "2021-07-07 11:29:36.889610",
+  "module": "Biox",
+  "name": "Missing Customer",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": "SELECT name, customer FROM `tabProject` WHERE `status` = 'Open' AND sales_order is NULL",
+  "ref_doctype": "Project",
+  "reference_report": null,
+  "report_name": "Missing Customer",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Missing Customer",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Projects User"
+   },
+   {
+    "parent": "Missing Customer",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Projects Manager"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [
+   {
+    "fieldname": "Project",
+    "fieldtype": "Data",
+    "label": "Project",
+    "options": "Project",
+    "parent": "Improper Test Ranges",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "parent",
+    "fieldtype": "Link",
+    "label": "Test Structure",
+    "options": "Lab Test Structure",
+    "parent": "Improper Test Ranges",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "parameter",
+    "fieldtype": "Data",
+    "label": "Parameter name",
+    "options": null,
+    "parent": "Improper Test Ranges",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "upper_range",
+    "fieldtype": "Data",
+    "label": "Upper Range",
+    "options": null,
+    "parent": "Improper Test Ranges",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Lower_range",
+    "fieldtype": "Data",
+    "label": "Lower Range",
+    "options": null,
+    "parent": "Improper Test Ranges",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   }
+  ],
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "biox",
+  "modified": "2021-07-07 14:13:44.374264",
+  "module": "Biox",
+  "name": "Improper Test Ranges",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": "select  \n\tlts.project, tdv.parent, tdv.parameter, tdv.upper_range, tdv.lower_range \n\tfrom `tabParameter Detail Values` tdv  \n\tinner join `tabLab Test Structure` lts on tdv.parent=lts.name  \n\tinner join tabProject p on lts.project=p.name  \n\twhere  \n\t(tdv.upper_range=0 and tdv.lower_range=0) \n\tor (tdv.upper_range < tdv.lower_range) \n\tand p.status='Open';",
+  "ref_doctype": "Parameter Detail Values",
+  "reference_report": "",
+  "report_name": "Improper Test Ranges",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": []
+ },
+ {
+  "add_total_row": 0,
+  "columns": [
+   {
+    "fieldname": "Project",
+    "fieldtype": "Link",
+    "label": "Project",
+    "options": "Project",
+    "parent": "Duplicate Lab Test Structures",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "name",
+    "fieldtype": "Link",
+    "label": "Lab Test Structure",
+    "options": "Lab Test Structure",
+    "parent": "Duplicate Lab Test Structures",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   }
+  ],
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "biox",
+  "modified": "2021-07-07 13:50:08.971660",
+  "module": "Biox",
+  "name": "Duplicate Lab Test Structures",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": "select \n\tproject, name \nfrom \n\t`tabLab Test Structure` where project in \n    (select project from \n     \t(select project, count(name) as count from `tabLab Test Structure` where active=1 group by project) lts \n     \twhere lts.count > 1) \norder by project;",
+  "ref_doctype": "Lab Test Structure",
+  "reference_report": null,
+  "report_name": "Duplicate Lab Test Structures",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Duplicate Lab Test Structures",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Biox Project Manager"
+   },
+   {
+    "parent": "Duplicate Lab Test Structures",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Biox Project User"
+   }
+  ]
  }
 ]
