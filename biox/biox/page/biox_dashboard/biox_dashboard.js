@@ -139,6 +139,7 @@ function master_data_issues(page, filters) {
                 $('<h6 align = left><a href ='  + r.message.missing_cust_report_url + ' target="_blank">' + "Missing Sales Order : " + r.message.missing_so + '</a></h6>').appendTo(container);
                 $('<h6 align = left><a href =' + r.message.improper_test_ranges_report_url + ' target="_blank" rel="noopener noreferrer">'+ "Verify Test Ranges : " + r.message.improper_test_ranges + '</a></h6>').appendTo(container);
                 $('<h6 align = left><a href =' + r.message.duplicate_lab_test_structure_report_url + ' target="_blank" rel="noopener noreferrer">'+ "Duplicate Test Structures : " + r.message.duplicate_lab_test_structure + '</a></h6>').appendTo(container);
+                $('<h6 align = left><a href =' + r.message.missing_customer_contract_no_report_url + ' target="_blank" rel="noopener noreferrer">'+ "Missing Customer Contract No :"  + r.message.missing_customer_contract_no + '</a></h6>').appendTo(container);
             } else {                 
                 $('<h1>0</h1>').appendTo(container);
             }
@@ -190,18 +191,23 @@ function get_lab_test_charts(page, filters) {
                             labels:d.month,
                             datasets: [
                                         {   'name': 'Volume',
-                                            'values': d.month_result
+                                            'values': d.month_result,
+                                            'chart_type': 'line',
+                                            lineoptions:{dotSize: 8, hideDots: 0}
                                         },
-                                        {   'name': 'Daily Average',
-                                            'values': d.daily_average
+                                        {   'name': '30 x Daily Avg',
+                                            'values': d.daily_average,
+                                            'chart_type': 'bar'
                                         }
-                                    ],
-                            type: 'axis-mixed'
+                                    ]
                             }
                     } else {
                         chart_data={
                             labels:d.month,
-                            datasets: [{ values: d.month_result, color: d.value_color }],
+                            datasets: [{ 
+                                        'values': d.month_result, 
+                                        'chart_type': 'line'
+                                    }],
                             yRegions: [
                                     {
                                         label: "Contractual Range",
@@ -210,6 +216,7 @@ function get_lab_test_charts(page, filters) {
                                         options: { labelPos: 'right' }
                                     }
                                 ],
+
                             }
                     }
                     
@@ -222,6 +229,8 @@ function get_lab_test_charts(page, filters) {
                                         type: 'axis-mixed', 
                                         height: 250,
                                         colors: ['#7cd6fe', '#743ee2']
+
+                                        
                         })            
                 })
             }

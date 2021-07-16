@@ -65,10 +65,18 @@ def get_project_stats(filters):
                         {cust_filt} """
     test_count =  frappe.db.sql(sql_query, as_dict=True)
     
+    sql_query = f"""SELECT 
+                        COUNT(so.name) AS `count` 
+                        from `tabSales Order` so
+                        WHERE so.docstatus = 1 and po_no is null
+                        """
+    so_count =  frappe.db.sql(sql_query, as_dict=True)
+
     return frappe._dict({
                 'project_count': project_count,
                 'flow_count': flow_count[0].count,
-                'test_count': test_count[0].count
+                'test_count': test_count[0].count,
+                'so_count': so_count[0].count
             })
 
 
@@ -118,13 +126,21 @@ def master_data_issues(filters):
     duplicate_lab_test_structure = frappe.db.sql(sql_query, as_dict=True)
     duplicate_lab_test_structure_report_url = frappe.utils.get_url_to_report(name='Duplicate Lab Test Structures',report_type='Query Report', doctype='Lab Test Structure')    
 
+    sql_query = """ select count(name) as count 
+                        from `tabSales Order` where docstatus=1 and po_no is null
+                """
+    missing_customer_contract_no = frappe.db.sql(sql_query, as_dict=True)
+    missing_customer_contract_no_report_url = frappe.utils.get_url_to_report(name='Missing Contract Number',report_type='Query Report', doctype='Lab Test Structure')    
+
     return frappe._dict({
             'missing_so': missing_so[0].count,
             'missing_cust_report_url': missing_cust_report_url,
             'improper_test_ranges': improper_test_ranges[0].count,
             'improper_test_ranges_report_url': improper_test_ranges_report_url,
             'duplicate_lab_test_structure': duplicate_lab_test_structure[0].count,
-            'duplicate_lab_test_structure_report_url': duplicate_lab_test_structure_report_url
+            'duplicate_lab_test_structure_report_url': duplicate_lab_test_structure_report_url,
+            'missing_customer_contract_no': missing_customer_contract_no[0].count,
+            'missing_customer_contract_no_report_url' :missing_customer_contract_no_report_url
         })
 
     
@@ -154,10 +170,10 @@ def get_lab_test_charts(filters):
 
     # print(date_labels)
     sql_query = f"""
-                    select dash.*, round(dash.month_result/dash.num_samples,2) as daily_average
+                    select dash.*, round(dash.month_result/dash.num_samples,2)*30 as daily_average
                     from(
                         select 
-                            ltr.project as project
+                            p.project_name as project
                             , date_format(ltr.sample_date_time, \'%%Y-%%m\') as month
                             , prv.parameter as parameter
                             , pdv.upper_range as upper_range
@@ -194,7 +210,7 @@ def get_lab_test_charts(filters):
                         from 
                         (
                             select  
-                                tw1.project , 
+                                p.project_name as project, 
                                 date_format(tw1.measurement_date__time,\'%%Y-%%m-%%d\') as Measurement_day , 
                                 avg(calculated_daily_volume) as calculated_daily_volume 
                             from `tabWater Height Measurement`  tw1
