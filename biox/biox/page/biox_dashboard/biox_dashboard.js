@@ -22,7 +22,7 @@ frappe.provide("frappe.charts")
 
 var dt_to = new Date()
 var dt_from = new Date(dt_to.getFullYear(),dt_to.getMonth()-6,1)
-var html_grids_per_row=3
+var html_grids_per_row=2
 
 frappe.pages['biox-dashboard'].on_page_load = function(wrapper) {
     var page = frappe.ui.make_app_page({
